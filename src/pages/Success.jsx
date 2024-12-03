@@ -1,8 +1,10 @@
 import React from 'react'
 import "../css/Success.css"
+import Footer from '../components/Footer'
 
 function Success() {
   return (
+    <>
     <div className='success'>
       <img className='img-success' src="./images/iteration-1-images/logo.svg" />
       <div className='text-success'>
@@ -10,6 +12,8 @@ function Success() {
       <p>SİPARİŞİNİZ ALINDI!</p>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 
