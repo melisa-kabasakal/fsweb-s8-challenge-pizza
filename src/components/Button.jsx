@@ -28,3 +28,4 @@ function Button({ isFormValid, pizzaCount, add, removed, totalAmount, selectedMa
 }
 
 export default Button
+

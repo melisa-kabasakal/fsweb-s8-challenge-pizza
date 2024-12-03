@@ -2,19 +2,19 @@ import "../css/Materials.css"
 
 function Materials({ handleSelectMaterials }) {
     const materialList = [
-        {name: "Papperoni", price:5},
-        {name: "Sosis", price:5},
-        {name: "Kanada Jambonu", price:5},
-        {name: "Tavuk Izgara", price:5},
-        {name: "Soğan", price:5},
-        {name: "Domates", price:5},
-        {name: "Mısır", price:5},
-        {name: "Sucuk", price:5},
-        {name: "Jalepeno", price:5},
-        {name: "Sarımsak", price:5},
-        {name: "Biber", price:5},
-        {name: "Ananas", price:5},
-        {name: "Kabak", price:5},
+        {name: "Papperoni"},
+        {name: "Sosis"},
+        {name: "Kanada Jambonu"},
+        {name: "Tavuk Izgara"},
+        {name: "Soğan"},
+        {name: "Domates"},
+        {name: "Mısır"},
+        {name: "Sucuk"},
+        {name: "Jalepeno"},
+        {name: "Sarımsak"},
+        {name: "Biber"},
+        {name: "Ananas"},
+        {name: "Kabak"},
     ];
     
   return (
@@ -26,7 +26,7 @@ function Materials({ handleSelectMaterials }) {
       <div className="check">
          {materialList.map((material, index) => (
             <div key={index} className="material-item">
-              <input type="checkbox" id={material.name} value={material.name} onChange={handleSelectMaterials}/>
+              <input type="checkbox" id={material.name} value={material.name} onChange={handleSelectMaterials} data-cy={`checkbox-${material.name}`}/>
               <label htmlFor={material.name}>{material.name}</label>
             </div>
           ))}
