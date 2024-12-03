@@ -99,22 +99,22 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
             <div className='size'>
                 <div>
                 <h4>Boyut Seç</h4>
-                    <input type='radio' name='size' value="small" onChange={handleSize} checked={size === 'small'}/>
+                    <input type='radio' name='size' value="small" onChange={handleSize} checked={size === 'small'} data-cy="size-input"/>
                     <label htmlFor='kucuk'>Küçük</label>
 
-                    <input type='radio' name='size' value="medium" onChange={handleSize} checked={size === 'medium'}/>
+                    <input type='radio' name='size' value="medium" onChange={handleSize} checked={size === 'medium'} data-cy="size-input"/>
                     <label htmlFor='orta'>Orta</label>
                 
-                    <input type='radio' name='size' value="large" onChange={handleSize} checked={size === 'large'}/>
+                    <input type='radio' name='size' value="large" onChange={handleSize} checked={size === 'large'} data-cy="size-input"/>
                     <label htmlFor='buyuk'>Büyük</label>
                 </div>
                 <div>
                 <h4>Hamur Seç</h4>
                 <select value={dough} onChange={handleDoughChange}>
-                    <option value="">Hamur Kalınlığı</option>
-                    <option value="ince">İnce</option>
-                    <option value="normal">Normal</option>
-                    <option value="kalın">Kalın</option>
+                    <option value="" data-cy="size-dough">Hamur Kalınlığı</option>
+                    <option value="ince" data-cy="size-dough">İnce</option>
+                    <option value="normal" data-cy="size-dough">Normal</option>
+                    <option value="kalın" data-cy="size-dough">Kalın</option>
                 </select>
                 </div>
             </div>
