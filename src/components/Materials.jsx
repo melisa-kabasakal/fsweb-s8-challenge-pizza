@@ -17,6 +17,7 @@ function Materials({ handleSelectMaterials }) {
         {name: "Kabak"},
     ];
     
+    
   return (
     <div>
       <label className="materials">Ek Malzemeler</label>

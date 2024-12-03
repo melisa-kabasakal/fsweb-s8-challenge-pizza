@@ -63,6 +63,7 @@ function OrderPizzaForm() {
                 setDough('');
                 setPizzaCount(1);
                 history.push('/success');
+                console.log('Sipariş Özeti:', res.data);
             } else {
                 history.push('/orderpizza');
             }
@@ -70,24 +71,24 @@ function OrderPizzaForm() {
         .catch((error) => {
             console.error('Sipariş sırasında bir hata oluştu:', error);
             history.push('/orderpizza');
-        });
-};
-const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.length <= 10 && isim.length >= 3 && dough && pizzaCount > 0;
+        })
+}
+const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.length <= 10 && isim.length >= 3 && dough && pizzaCount > 0
 
 
   const addPizza = () => {
-    setPizzaCount(pizzaCount + 1);
+    setPizzaCount(pizzaCount + 1)
   }
 
   const removePizza = () => {
     if (pizzaCount > 1) {
-      setPizzaCount(pizzaCount - 1);
+      setPizzaCount(pizzaCount - 1)
     }
   } 
 
-  const selectedMaterialsPrice = selectMaterials.length * 5; 
-  const basePrice = 85.5; 
-  const totalAmount = (basePrice + selectedMaterialsPrice) * pizzaCount;
+  const selectedMaterialsPrice = selectMaterials.length * 5 
+  const basePrice = 85.5
+  const totalAmount = (basePrice + selectedMaterialsPrice) * pizzaCount
   
 
  
