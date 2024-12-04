@@ -19,7 +19,7 @@ function Button({ isFormValid, pizzaCount, add, removed, totalAmount, selectedMa
       </div>
       <div>
         <h4>Sipariş Toplamı</h4>
-        <p>Seçimler: {selectedMaterialsPrice.toFixed(2)}₺</p>
+        <p>Seçimler: {selectedMaterialsPrice.toFixed(2) * 2}₺</p>
         <p style={{color: 'red'}}>Toplam: {totalAmount.toFixed(2)}₺</p>
         <button className='siparis' type='button' disabled={!isFormValid} onClick={handleOrder}>Sipariş Ver</button>
       </div>
