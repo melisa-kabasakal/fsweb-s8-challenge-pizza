@@ -133,10 +133,10 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
             <Materials handleSelectMaterials={handleSelectMaterials}/>
             <div className='name'>
             <label style={{fontWeight:'bold'}}>İsim<span style={{color:'red'}}>*</span></label>
-                <label>
-                    <input type='text' id="name" value={isim} onChange={handleNameChange} minLength={3} required/>
-                </label>
             </div>
+                <label>
+                    <input type='text' id="name" value={isim} onChange={handleNameChange} />
+                </label>
             <div className='notes'>
             <label style={{fontWeight:'bold'}}>Sipariş Notu</label>
               <div>
