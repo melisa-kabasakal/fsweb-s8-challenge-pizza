@@ -4,11 +4,6 @@
     align-items: center;
   }
   
-  .size-container{
-    display: flex;
-    justify-content: space-between;
-  }
-  
   label {
     display: block;
     margin: 5px 0;
@@ -19,5 +14,23 @@
     justify-content: space-between;
   }
   
+  .radio-container {
+    display: block;
+    align-items: center;
+    font-size: 15;
+  }
+  
+  .radio-container input {
+    margin-right: 8px;
+  }
+  
+  .radio-option {
+    display: flex;
+    align-items: center; /* Yatayda hizalama */
+    margin-bottom: 10px; /* Her bir seçenek arasında boşluk bırakır */
+  }
+  .name, .notes{
+    padding-top: 1rem;
+  }
   
   

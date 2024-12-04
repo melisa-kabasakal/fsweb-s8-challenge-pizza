@@ -62,7 +62,13 @@ function OrderPizzaForm() {
                 setNotes('');
                 setDough('');
                 setPizzaCount(1);
-                history.push('/success');
+                history.push({ 
+                    pathname: '/success',
+                    state: {
+                        orderId: res.data.id,
+                        orderData: orderData
+                    }
+                });
                 console.log('Sipariş Özeti:', res.data);
             } else {
                 history.push('/orderpizza');
@@ -98,19 +104,23 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
     <div>
         <form className='form' onSubmit={handleSubmit}>
             <div className='size'>
-                <div>
-                <h4>Boyut Seç</h4>
-                    <input type='radio' name='size' value="small" onChange={handleSize} checked={size === 'small'} data-cy="size-small"/>
-                    <label htmlFor='kucuk'>Küçük</label>
-
-                    <input type='radio' name='size' value="medium" onChange={handleSize} checked={size === 'medium'} data-cy="size-medium"/>
-                    <label htmlFor='orta'>Orta</label>
-                
-                    <input type='radio' name='size' value="large" onChange={handleSize} checked={size === 'large'} data-cy="size-large"/>
-                    <label htmlFor='buyuk'>Büyük</label>
+                <div className="radio-container">
+                    <h4 style={{fontSize:'18px'}}>Boyut Seç<span style={{color:'red'}}>*</span></h4>
+                      <label className="radio-option">
+                        <input type='radio' name='size' value="small" onChange={handleSize} checked={size === 'small'} data-cy="size-small"/>
+                         <label htmlFor='kucuk'>Küçük</label>
+                      </label>
+                      <label className="radio-option">
+                        <input type='radio' name='size' value="medium" onChange={handleSize} checked={size === 'medium'} data-cy="size-medium"/>
+                        <label htmlFor='orta'>Orta</label>
+                      </label>
+                      <label className="radio-option">
+                       <input type='radio' name='size' value="large" onChange={handleSize} checked={size === 'large'} data-cy="size-large"/>
+                       <label htmlFor='buyuk'>Büyük</label>
+                       </label>
                 </div>
                 <div>
-                <h4>Hamur Seç</h4>
+                <h4 style={{fontSize:'18px'}}>Hamur Seç<span style={{color:'red'}}>*</span></h4>
                 <select value={dough} onChange={handleDoughChange} data-cy="size-dough">
                     <option value="" >Hamur Kalınlığı</option>
                     <option value="ince" >İnce</option>
@@ -121,14 +131,14 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
             </div>
             
             <Materials handleSelectMaterials={handleSelectMaterials}/>
-            <div>
-            <label>İsim:</label>
+            <div className='name'>
+            <label style={{fontWeight:'bold'}}>İsim<span style={{color:'red'}}>*</span></label>
                 <label>
                     <input type='text' id="name" value={isim} onChange={handleNameChange} minLength={3} required/>
                 </label>
             </div>
-            <div>
-            <label>Sipariş Notu</label>
+            <div className='notes'>
+            <label style={{fontWeight:'bold'}}>Sipariş Notu</label>
               <div>
                 <label>
                    <textarea placeholder='Siparişine eklemek istediğin bir not var mı?' value={notes} onChange={handleNotesChange}/>

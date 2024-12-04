@@ -4,6 +4,7 @@ import OrderPizza from './pages/OrderPizza';
 import Home from './pages/Home'; 
 import Success from './pages/Success'; 
 import { Redirect, Route, Switch } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
