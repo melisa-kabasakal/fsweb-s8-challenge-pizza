@@ -5,12 +5,14 @@ import OrderPizzaForm from '../components/OrderPizzaForm'
 
 export default function OrderPizza() {
   return (
-    <div className="container">
+    <body className="container">
       <header className="header">
         <img className="img" src="./images/iteration-1-images/logo.svg" alt="" />
       </header>
+      
+      <img className="sub-img" src="./images/iteration-2-images/pictures/form-banner.png" alt="" />
        
-    <main className="main-content">
+    <div className="main-content">
       <section className="product">
       <h2>Position Absolute Acı Pizza</h2>
       <p style={{fontWeight:'bold'}}>85.50₺</p>
@@ -21,7 +23,7 @@ export default function OrderPizza() {
     </section>
     <OrderPizzaForm/>
     
-  </main>
-</div>
+  </div>
+</body>
   )
 }

@@ -15,6 +15,7 @@ function Materials({ handleSelectMaterials }) {
         {name: "Biber"},
         {name: "Ananas"},
         {name: "Kabak"},
+        {name: "Patlıcan"},
     ];
     
     

@@ -8,10 +8,19 @@
 .header{
     width: 100vw;
     background-color: #CE2829;
-    
+    height: 80px;
 }
+
+.sub-img{
+  max-height: 170px;
+  background-color: #FAF7F2;
+
+}
+
 .product{
   margin-top: 1rem;
+  background-size: 100vw;
+  background-color: #FAF7F2;
 }
 .img {
     max-width: 220px; 

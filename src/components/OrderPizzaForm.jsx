@@ -110,21 +110,21 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
                     <h4 style={{fontSize:'18px'}}>Boyut Seç<span style={{color:'red'}}>*</span></h4>
                       <label className="radio-option">
                         <input type='radio' name='size' value="small" onChange={handleSize} checked={size === 'small'} data-cy="size-small"/>
-                         <label htmlFor='kucuk'>Küçük</label>
+                         <span>S</span>
                       </label>
                       <label className="radio-option">
                         <input type='radio' name='size' value="medium" onChange={handleSize} checked={size === 'medium'} data-cy="size-medium"/>
-                        <label htmlFor='orta'>Orta</label>
+                        <span>M</span>
                       </label>
                       <label className="radio-option">
                        <input type='radio' name='size' value="large" onChange={handleSize} checked={size === 'large'} data-cy="size-large"/>
-                       <label htmlFor='buyuk'>Büyük</label>
+                       <span>L</span>
                        </label>
                 </div>
                 <div>
                 <h4 style={{fontSize:'18px'}}>Hamur Seç<span style={{color:'red'}}>*</span></h4>
-                <select value={dough} onChange={handleDoughChange} data-cy="size-dough">
-                    <option value="" >Hamur Kalınlığı</option>
+                <select className="dough" value={dough} onChange={handleDoughChange} data-cy="size-dough">
+                    <option value="" >-Hamur Kalınlığı Seç-</option>
                     <option value="ince" >İnce</option>
                     <option value="normal" >Normal</option>
                     <option value="kalın" >Kalın</option>
@@ -140,7 +140,7 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
                     <input type='text' id="name" value={isim} onChange={handleNameChange} />
                 </label>
             <div className='notes'>
-            <label style={{fontWeight:'bold'}}>Sipariş Notu</label>
+            <label style={{fontWeight:'bold'}}>Siparişine eklemek istediğin bir not var mı?</label>
               <div>
                 <label>
                    <textarea placeholder='Siparişine eklemek istediğin bir not var mı?' value={notes} onChange={handleNotesChange}/>

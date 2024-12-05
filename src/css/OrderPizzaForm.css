@@ -15,18 +15,67 @@
     align-items: center;
     font-size: 15;
   }
-  
-  .radio-container input {
-    margin-right: 8px;
+
+  h4{
+    padding-top: 20px;
   }
   
   .radio-option {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 10px;
+    margin: 10px;
   }
   .name, .notes{
     padding-top: 1rem;
+
+  }
+
+  .dough{
+    height: 55px;
+    background: #FAF7F2;
+    width: 200px;
+    margin-right: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  input[type='text'] {
+    width: 500px;
+    height: 40px;
+    background: #FAF7F2;
+  }
+  textarea{
+    width: 500px;
+    height: 40px;
+    background: #FAF7F2;
+  }
+
+  input[type="radio"] {
+    display: none;
+    appearance: none;
   }
   
+  input[type="radio"] + span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Barlow, sans-serif;
+    color: #333;
+    border: 2px solid #473a24;
+    border-radius: 30px;
+    width: 46px;
+    height: 46px;
+    text-align: center;
+    border:none;
+    background: #FAF7F2;
+
+
+  }
+  
+  
+  input[type="radio"]:checked + span{
+    background-color: #FFEECC;
+
+  }
   
