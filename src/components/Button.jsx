@@ -19,7 +19,7 @@ function Button({ isFormValid, pizzaCount, add, removed, totalAmount, selectedMa
         <button type="button" onClick={add}>+</button>
       </div>
       <div className='card'>
-    <Card body>
+    <Card body className='card-body' style={{backgroundColor:"#FAF7F2"}}>
       <CardTitle tag="p" style={{fontWeight: 'bold'}}>
         Sipariş Toplamı
       </CardTitle>

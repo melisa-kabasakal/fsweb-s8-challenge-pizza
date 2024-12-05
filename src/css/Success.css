@@ -7,9 +7,13 @@
     align-items: center;
 
 }
-.text{
-    margin-top: 0;
-    padding: 0;
+.text-success{
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 92px;
+    color: white;
+    text-align: center;
+
 }
 
 .img-success{

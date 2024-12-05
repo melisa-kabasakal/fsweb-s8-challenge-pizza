@@ -80,7 +80,8 @@ const InstImg = styled.img`
 `
 
 const FooterBottom = styled.div`
-
+min-width: 1450px;
+position: relative;
 `
 
 

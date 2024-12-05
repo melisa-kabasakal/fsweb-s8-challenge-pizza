@@ -25,6 +25,7 @@
   }
   .name, .notes{
     padding-top: 1rem;
+    border: none;
 
   }
 
@@ -41,11 +42,15 @@
     width: 500px;
     height: 40px;
     background: #FAF7F2;
+    border: none;
+    border-radius: 6px;
   }
   textarea{
     width: 500px;
     height: 40px;
     background: #FAF7F2;
+    border-radius: 6px;
+    border: none;
   }
 
   input[type="radio"] {

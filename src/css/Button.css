@@ -23,3 +23,18 @@
     .count{
       padding: 0 0.5rem;
     }
+    .card-body{
+      width: 350px;
+      height: 100px;
+      background-color: #FAF7F2;
+
+      
+    }
+   .siparis{
+      width: 330px;
+      height: 56px;
+      opacity: 0px;
+      border-radius: 6px;
+      margin-left: -10px;
+
+    }

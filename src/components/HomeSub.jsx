@@ -149,6 +149,116 @@ display: flex;
 white-space: nowrap;
 `
 
+const PicturesContainer = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap:2rem;
+margin: 20px;
+
+`
+
+const PictureConteiner = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap:2rem;
+margin: 20px;
+
+`
+
+const Picture = styled.div`
+    background-image: url("./images/iteration-2-images/pictures/food-1.png");
+    background-size: cover;
+    border: 2px solid #FDC913;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    height: 400px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    border:none;
+
+
+`
+
+const PictureText = styled.p`
+font-family: Barlow;
+font-size: 22px;
+font-weight: 600;
+line-height: 29.44px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+`
+const PictureCount = styled.div``
+
+const Picture2 = styled.div`
+    background-image: url("./images/iteration-2-images/pictures/food-2.png");
+    background-size: cover;
+    border: 2px solid #FDC913;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    height: 250px;
+    width: 300px;
+    height: 400px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    border: none;
+
+`
+const Picture2Text = styled.p`
+font-family: Barlow;
+font-size: 22px;
+font-weight: 600;
+line-height: 29.44px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+`
+
+
+const Picture3 = styled.div`
+    background-image: url("./images/iteration-2-images/pictures/food-3.png");
+    background-color: #FFFFFF;
+    background-size: cover;
+    border: 2px solid #FDC913;
+    overflow: hidden;
+    height: 250px;
+    width: 300px;
+    height: 400px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    border:none;
+`
+const Picture3Text = styled.p`
+font-family: Barlow;
+font-size: 22px;
+font-weight: 600;
+line-height: 29.44px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+`
+const CountContainer = styled.div``
+
 function HomeSub() {
   return (
     <>
@@ -215,6 +325,33 @@ function HomeSub() {
             </IconItems>
            </IconList>
         </IconContainer>
+
+        <PicturesContainer >
+
+        <PictureConteiner>
+        <Picture >
+        <PictureText >Terminal Pizza</PictureText>
+        <PictureCount>4.9 (200) 60₺</PictureCount>
+        </Picture>
+       
+        </PictureConteiner>
+
+        <PictureConteiner>
+        <Picture2>
+        <Picture2Text >Position Absolute Acı Pizza</Picture2Text>
+        <PictureCount>4.9 (200) 60₺</PictureCount>
+        </Picture2>
+        </PictureConteiner>
+
+        <PictureConteiner>
+        <Picture3>
+        <Picture3Text>useEffect Tavuklu Burger</Picture3Text>
+        <PictureCount>4.9 (200) 60₺</PictureCount>
+        </Picture3>
+       
+        </PictureConteiner>
+
+        </PicturesContainer>
 
     </Container>
     <Footer />

@@ -9,7 +9,7 @@ function Success() {
     <div className='success'>
       <img className='img-success' src="./images/iteration-1-images/logo.svg" />
       <p className='text-top'>lezzetin yolda</p>
-      <p className='text'>SİPARİŞ ALINDI!</p>
+      <p className='text-success'>SİPARİŞ ALINDI!</p>
       
     </div>
     <Footer/>
