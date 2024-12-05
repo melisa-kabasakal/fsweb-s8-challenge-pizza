@@ -13,15 +13,18 @@ const FooterContainer = styled.footer`
    color:white;
    height: 300px;
    
+   
 `
 const FooterBottomItem = styled.div`
    display: flex;
    justify-content: space-between;
    align-items: center;
-   flex-direction: row;
    background-color: #292929;
    color:white;
-   padding: 0 8rem;
+   height: 50px;
+   width: 100vw;
+   padding: 0 2rem;
+  
 
 `
 const FooterTitle = styled.img`
@@ -80,8 +83,7 @@ const InstImg = styled.img`
 `
 
 const FooterBottom = styled.div`
-min-width: 1450px;
-position: relative;
+
 `
 
 
