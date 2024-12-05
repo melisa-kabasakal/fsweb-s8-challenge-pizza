@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 
-function OrderPizzaForm() {
+function OrderPizzaForm({ setOrderData }) {
     const [size, setSize] = useState('')
     const [selectMaterials, setSelectMaterials] = useState([])
     const [isim, setIsim] = useState('')
@@ -45,10 +45,11 @@ function OrderPizzaForm() {
         const orderData = {
             isim: isim,
             boyut: size,
-            ekMalzemeler: selectMaterials,
+            materials: selectMaterials,
             note: notes,
-            hamurKalınlığı: dough,
+            dough: dough,
             pizzaSayisi: pizzaCount,
+            totalAmount: totalAmount
         }
     
 
@@ -56,16 +57,17 @@ function OrderPizzaForm() {
         .post('https://reqres.in/api/pizza', orderData)
         .then((res) => {
             if (res.data && res.data.id) {
+                setOrderData(orderData)
                 setIsim('');
                 setSize('');
                 setSelectMaterials([]);
                 setNotes('');
                 setDough('');
                 setPizzaCount(1);
+
                 history.push({ 
                     pathname: '/success',
                     state: {
-                        orderId: res.data.id,
                         orderData: orderData
                     }
                 });

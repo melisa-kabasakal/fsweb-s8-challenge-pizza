@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import { Card, CardText, CardTitle } from 'reactstrap'
 
 function Button({ isFormValid, pizzaCount, add, removed, totalAmount, selectedMaterialsPrice }) {
-  
   const history = useHistory()
   const handleOrder = () => {
     if(isFormValid){

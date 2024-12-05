@@ -114,7 +114,7 @@ function Footer() {
         </FooterList>
         
         <InstContainer>
-           <InstTitle>Instegram</InstTitle>
+           <InstTitle>Instagram</InstTitle>
            <InstImgContainer>
             <InstImg src='./images/iteration-2-images/footer/insta/li-0.png'/>
             <InstImg src='./images/iteration-2-images/footer/insta/li-1.png'/>

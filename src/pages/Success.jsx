@@ -2,6 +2,7 @@ import React from 'react'
 import "../css/Success.css"
 import Footer from '../components/Footer'
 
+
 function Success() {
   return (
     <>
