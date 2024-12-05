@@ -12,6 +12,9 @@ const IconContainer = styled.section`
     margin-right: 5rem;
     padding: .5rem 0;
     border: none;
+    background-color: #FFFFFF;
+    width: 100vw;
+
 
 `
 const IconList = styled.ul`
@@ -33,13 +36,22 @@ const Iconİmg = styled.img`
 max-width:30px;
 `
 const IconText = styled.span`
-font-size:.8rem 
+font-size:.8rem ;
+padding: 0 5px;
+`
+const Icon1Container = styled.section``
+const IconButton = styled.button`
+width: 150px;
+height: 50px;
+border-radius: 50px;
+color:black;
+background-color: #FFFFFF;
+font-family: Barlow;
+font-weight:500;
+
 `
 
 const ContainerCart = styled.div`
-position:absolute;
-left:135px;
-top:298px; 
 
 `
 const Cart = styled.div`
@@ -118,10 +130,18 @@ font-weight: 600;
 
 `
 const PositionContainer = styled.div`
-position:absolute;
-right:140px;
-top:298px;
-
+    border: 2px solid #FDC913;
+    overflow: hidden;
+    height: 250px;
+    width: 300px;
+    border:none;
+`
+const Position = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+gap:1rem;
+margin-top: 40rem;
 `
 const Container = styled.section`
     display: flex;
@@ -129,24 +149,22 @@ const Container = styled.section`
     justify-content: center;
     align-items: center;
     background-color: #FAF7F2;
-
 `
 const Sub = styled.div`
-margin-right: 30%;
-margin-top: 250px;
+    margin-top: 250px;
+    text-align: center;
 `
 
 const SubNote = styled.h4`
 color:#CE2829;
 font-family: 'Satisfy', cursive;
-padding-top: .5rem;
+padding-top: 5rem;
 `
 const SubTitle = styled.h3`
 color:#090101;
 font-size:30px;
-width: 20px;
-display: flex;
-white-space: nowrap;
+margin-bottom: 1.5rem;
+
 `
 
 const PicturesContainer = styled.div`
@@ -159,12 +177,10 @@ margin: 20px;
 `
 
 const PictureConteiner = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap:2rem;
-margin: 20px;
-
+    display: flex;
+    flex-wrap: wrap;
+    
+    
 `
 
 const Picture = styled.div`
@@ -179,24 +195,33 @@ const Picture = styled.div`
     background-repeat: no-repeat;
     background-position: top;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: flex-end;
-    padding-bottom: 30px;
     border:none;
-
-
+    margin-bottom: 50px;
 `
 
 const PictureText = styled.p`
-font-family: Barlow;
-font-size: 22px;
-font-weight: 600;
-line-height: 29.44px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+    font-family: Barlow;
+    font-weight: 600;
+    padding-left:10px;
 `
-const PictureCount = styled.div``
+const PictureCount = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;   
+`
+const Count1 = styled.p`
+margin-left: 20px;
+`
+const Count2 = styled.p`
+padding-left: 5rem;
+`
+const Count3 = styled.p`
+font-weight: bold;
+margin-right: 20px;
+`
 
 const Picture2 = styled.div`
     background-image: url("./images/iteration-2-images/pictures/food-2.png");
@@ -204,60 +229,41 @@ const Picture2 = styled.div`
     border: 2px solid #FDC913;
     background-color: #FFFFFF;
     overflow: hidden;
-    height: 250px;
-    width: 300px;
     height: 400px;
     width: 300px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: flex-end;
-    padding-bottom: 30px;
-    border: none;
+    border:none;
+    margin-bottom: 50px;
 
 `
-const Picture2Text = styled.p`
-font-family: Barlow;
-font-size: 22px;
-font-weight: 600;
-line-height: 29.44px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-`
-
-
 const Picture3 = styled.div`
     background-image: url("./images/iteration-2-images/pictures/food-3.png");
-    background-color: #FFFFFF;
     background-size: cover;
     border: 2px solid #FDC913;
+    background-color: #FFFFFF;
     overflow: hidden;
-    height: 250px;
-    width: 300px;
     height: 400px;
     width: 300px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: flex-end;
-    padding-bottom: 30px;
     border:none;
+    margin-bottom: 50px;
 `
-const Picture3Text = styled.p`
-font-family: Barlow;
-font-size: 22px;
-font-weight: 600;
-line-height: 29.44px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-`
-const CountContainer = styled.div``
+const InterIconContainer = styled.div`
+position:absolute;
+left:5rem;
+right: 5rem;
+top:320px; 
+    `
 
 function HomeSub() {
   return (
@@ -281,7 +287,8 @@ function HomeSub() {
             </IconItems>
            </IconList>
         </IconContainer>
-        
+        <InterIconContainer>
+        <Position >
         <ContainerCart>
         <Cart>
              <CartTitle>Özel Lezzetus</CartTitle>
@@ -289,6 +296,7 @@ function HomeSub() {
              <CartButon>SİPARİŞ VER</CartButon>
         </Cart>
         </ContainerCart>
+
         <PositionContainer>
         <BurgerContainer>
              <BurgerText>Hackathlon Burger Menü</BurgerText>
@@ -300,56 +308,70 @@ function HomeSub() {
              <CartButon>SİPARİŞ VER</CartButon>
         </CourierContainer>
         </PositionContainer>
+        </Position>
+        </InterIconContainer>
 
         <Sub>
-
         <SubNote>en çok paketlenen menüler</SubNote>
         <SubTitle>Acıktıran Kodlara Doyuran Lezzetler</SubTitle>
         </Sub>
 
-        <IconContainer>
+        <Icon1Container>
            <IconList >
             <IconItems>
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/1.svg'/>
             <IconText>Ramen</IconText>
+            </IconButton>
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/2.svg'/>
             <IconText>Pizza</IconText>
+            </IconButton>
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/3.svg'/>
             <IconText>Burger</IconText>
+            </IconButton>
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/4.svg'/>
             <IconText>French Fries</IconText>
+            </IconButton>
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/5.svg'/>
             <IconText>Fast Food</IconText>
+            </IconButton>
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/6.svg'/>
             <IconText>Soft Drinks</IconText>
+            </IconButton>
             </IconItems>
            </IconList>
-        </IconContainer>
+        </Icon1Container>
 
         <PicturesContainer >
 
-        <PictureConteiner>
         <Picture >
-        <PictureText >Terminal Pizza</PictureText>
-        <PictureCount>4.9 (200) 60₺</PictureCount>
+        <PictureConteiner>
+        <PictureText>Terminal Pizza</PictureText>
+        <PictureCount>
+        <Count1>4.9</Count1><Count2>(200)</Count2><Count3>60₺</Count3>
+        </PictureCount>
+        </PictureConteiner>
         </Picture>
-       
-        </PictureConteiner>
 
-        <PictureConteiner>
         <Picture2>
-        <Picture2Text >Position Absolute Acı Pizza</Picture2Text>
-        <PictureCount>4.9 (200) 60₺</PictureCount>
-        </Picture2>
-        </PictureConteiner>
-
         <PictureConteiner>
-        <Picture3>
-        <Picture3Text>useEffect Tavuklu Burger</Picture3Text>
-        <PictureCount>4.9 (200) 60₺</PictureCount>
-        </Picture3>
-       
+        <PictureText >Position Absolute Acı Pizza</PictureText>
+        <PictureCount><Count1>4.9</Count1><Count2>(200)</Count2><Count3>60₺</Count3></PictureCount>
         </PictureConteiner>
+        </Picture2>
+
+        
+        <Picture3>
+        <PictureConteiner>
+        <PictureText>useEffect Tavuklu Burger</PictureText>
+        <PictureCount><Count1>4.9</Count1><Count2>(200)</Count2><Count3>60₺</Count3></PictureCount>
+        </PictureConteiner>
+        </Picture3>
 
         </PicturesContainer>
 
