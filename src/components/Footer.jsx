@@ -7,8 +7,6 @@ import { faSquareTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const FooterContainer = styled.footer`
    display: flex;
-   justify-content: space-around;
-   align-items: center;
    justify-content: space-between;
    align-items: flex-start;
    background-color: #292929;
