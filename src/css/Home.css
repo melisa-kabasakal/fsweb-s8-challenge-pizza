@@ -53,3 +53,59 @@ input[type="button"]:hover {
     font-size: 70px;
     line-height: 80px;
 }
+
+@media (max-width: 420px) {
+    .home{
+        justify-content: flex-start;
+        padding: 10px;
+   }
+   .lezzet {
+    font-size: 30px;
+}
+
+.img-home {
+    max-width: 200px; 
+}
+
+.code {
+    font-size: 50px; 
+}
+}
+
+@media (max-width: 540px) {
+    .home{
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+   }
+   .lezzet {
+    font-size: 30px;
+}
+
+.img-home {
+    max-width: 200px; 
+}
+
+.code {
+    font-size: 50px; 
+}
+}
+
+@media (max-width: 768px) {
+    .home{
+      flex-direction: column; 
+      align-items: center;
+      padding: 20px;
+   }
+   .lezzet {
+    font-size: 30px; 
+}
+
+.img-home {
+    max-width: 200px; 
+}
+
+.code {
+    font-size: 50px; 
+}
+}

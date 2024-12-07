@@ -9,9 +9,28 @@ const FooterContainer = styled.footer`
    display: flex;
    justify-content: space-around;
    align-items: center;
+   justify-content: space-between;
+   align-items: flex-start;
    background-color: #292929;
-   color:white;
-   height: 300px;
+   color: white;
+   height: auto; 
+   padding: 40px 40px;
+   flex-wrap: wrap;
+   
+
+   @media (max-width: 420px) {
+    justify-content: flex-start;
+      padding: 10px;
+   }
+
+   @media (max-width: 540px) {
+    justify-content: flex-start;
+      padding: 10px;
+   }
+   @media (max-width: 768px) {
+      flex-direction: column; 
+      padding: 20px;
+   }
    
    
 `
@@ -74,11 +93,18 @@ const InstImgContainer = styled.div`
     overflow: hidden;
     gap:0.5rem;
 
+    @media (max-width: 420px) {
+        display:flex;
+        flex-wrap:wrap;
+    }
+
 `
 const InstTitle = styled.h3`
 
 `
 const InstImg = styled.img`
+display:flex;
+flex-wrap:wrap;
 
 `
 

@@ -8,20 +8,32 @@ const IconContainer = styled.section`
     overflow: hidden;
     max-height: 55px;
     max-width: 100%;
-    margin-left: 5rem;
-    margin-right: 5rem;
     padding: .5rem 0;
     border: none;
     background-color: #FFFFFF;
     width: 100vw;
 
 
+    @media (max-width: 540px) {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+  }
 `
 const IconList = styled.ul`
  display: flex;
  justify-content: space-between;
  padding: 0;
  margin: 0;
+ width: 100%;
+
+ @media (max-width: 540px) {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    padding: 0;
+    margin: 0;
+  }
 
 `
 const IconItems = styled.li`
@@ -30,7 +42,12 @@ const IconItems = styled.li`
    justify-content:center;
    align-items: center;
    gap:.8rem;
-   flex:1;
+   flex: 1 1 45%; 
+   margin-bottom: 1rem;
+
+   @media (max-width: 540px) {
+    flex: 1 1 45%; 
+  }
 `
 const Iconİmg = styled.img`
 max-width:30px;
@@ -39,7 +56,16 @@ const IconText = styled.span`
 font-size:.8rem ;
 padding: 0 5px;
 `
-const Icon1Container = styled.section``
+const Icon1Container = styled.section`
+    @media (max-width: 540px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+
+  } 
+
+`
 const IconButton = styled.button`
 width: 150px;
 height: 50px;
@@ -135,24 +161,43 @@ const PositionContainer = styled.div`
     height: 250px;
     width: 300px;
     border:none;
+    margin-top: -2px;
+
+    @media (max-width: 540px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        margin-left: 90px;
+  }
+
 `
 const Position = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 gap:1rem;
-margin-top: 40rem;
+margin: 2rem;
+
+@media (max-width: 540px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+
+  }
 `
 const Container = styled.section`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     background-color: #FAF7F2;
 `
 const Sub = styled.div`
-    margin-top: 250px;
-    text-align: center;
+margin-left:40px; 
+ margin-top: -70px;
+ text-align: center;
+
 `
 
 const SubNote = styled.h4`
@@ -163,37 +208,45 @@ padding-top: 5rem;
 const SubTitle = styled.h3`
 color:#090101;
 font-size:30px;
-margin-bottom: 1.5rem;
+margin: 1.5rem;
 
 `
 
 const PicturesContainer = styled.div`
 display: flex;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
-gap:2rem;
+gap:1rem;
 margin: 20px;
+
+@media (max-width: 540px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+
+  }
 
 `
 
 const PictureConteiner = styled.div`
     display: flex;
     flex-wrap: wrap;
+    gap:2rem;
     
     
 `
 
 const Picture = styled.div`
     background-image: url("./images/iteration-2-images/pictures/food-1.png");
-    background-size: cover;
+    background-size: contain;
+    background-position:top;
     border: 2px solid #FDC913;
     background-color: #FFFFFF;
     overflow: hidden;
     height: 400px;
     width: 300px;
-    background-size: contain;
     background-repeat: no-repeat;
-    background-position: top;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
@@ -225,13 +278,12 @@ margin-right: 20px;
 
 const Picture2 = styled.div`
     background-image: url("./images/iteration-2-images/pictures/food-2.png");
-    background-size: cover;
+    background-size: contain;;
     border: 2px solid #FDC913;
     background-color: #FFFFFF;
     overflow: hidden;
     height: 400px;
     width: 300px;
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     display: flex;
@@ -243,13 +295,12 @@ const Picture2 = styled.div`
 `
 const Picture3 = styled.div`
     background-image: url("./images/iteration-2-images/pictures/food-3.png");
-    background-size: cover;
+    background-size: contain;
     border: 2px solid #FDC913;
     background-color: #FFFFFF;
     overflow: hidden;
     height: 400px;
     width: 300px;
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     display: flex;
@@ -257,13 +308,10 @@ const Picture3 = styled.div`
     align-items: flex-end;
     border:none;
     margin-bottom: 50px;
+    
 `
-const InterIconContainer = styled.div`
-position:absolute;
-left:5rem;
-right: 5rem;
-top:320px; 
-    `
+
+    
 
 function HomeSub() {
   return (
@@ -287,7 +335,8 @@ function HomeSub() {
             </IconItems>
            </IconList>
         </IconContainer>
-        <InterIconContainer>
+        
+        
         <Position >
         <ContainerCart>
         <Cart>
@@ -309,7 +358,7 @@ function HomeSub() {
         </CourierContainer>
         </PositionContainer>
         </Position>
-        </InterIconContainer>
+        
 
         <Sub>
         <SubNote>en çok paketlenen menüler</SubNote>
