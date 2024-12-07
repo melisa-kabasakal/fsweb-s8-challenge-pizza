@@ -140,7 +140,7 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
                     <input type='text' id="name" value={isim} onChange={handleNameChange} />
                 </label>
             <div className='notes'>
-            <label style={{fontWeight:'bold'}}>Siparişine eklemek istediğin bir not var mı?</label>
+            <label style={{fontWeight:'bold'}}>Sipariş Notu</label>
               <div>
                 <label>
                    <textarea placeholder='Siparişine eklemek istediğin bir not var mı?' value={notes} onChange={handleNotesChange}/>

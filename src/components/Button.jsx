@@ -18,7 +18,7 @@ function Button({ isFormValid, pizzaCount, add, removed, totalAmount, selectedMa
         <span className='count'> {pizzaCount} </span>
         <button type="button" onClick={add}>+</button>
       </div>
-      <div className='card'>
+    <div calasname= "card">
     <Card body className='card-body' style={{backgroundColor:"#FAF7F2"}}>
       <CardTitle tag="p" style={{fontWeight: 'bold'}}>
         Sipariş Toplamı
@@ -29,8 +29,9 @@ function Button({ isFormValid, pizzaCount, add, removed, totalAmount, selectedMa
       <CardText style={{color: 'red'}}>
         Toplam: {totalAmount.toFixed(1)}₺
       </CardText>
+      
+      </Card>
       <button className='siparis' type='button' disabled={!isFormValid} onClick={handleOrder}>Sipariş Ver</button>
-    </Card>
       </div>
     </div>
   )

@@ -13,7 +13,7 @@ export default function OrderPizza() {
       </header>
       
       <div className='section-top'>
-      <img className="sub-img" src="./images/iteration-2-images/pictures/form-banner.png" alt="" />
+      
        
     
       <section className="product">

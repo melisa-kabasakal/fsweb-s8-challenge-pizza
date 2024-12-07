@@ -83,4 +83,36 @@
     background-color: #FFEECC;
 
   }
+
+  @media (max-width: 540px) {
+    .form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 30px;
+
+  }
+  .radio-container{
+    display: grid;
+      grid-template-columns:repeat(1, 1fr);
+      grid-template-rows: repeat(1, 50px); 
+      margin: 0 20px;
+  }
+  .size{
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+    
+  }
+  textarea{
+    max-width: 90%;
+  }
+
+  input[type="text"]{
+    max-width: 90%;
+  }
+
+}
   
