@@ -14,6 +14,7 @@ function OrderPizzaForm({ setOrderData }) {
     const [notes, setNotes] = useState('');
     const [dough, setDough] = useState('');
     const [pizzaCount, setPizzaCount] = useState(1);
+    
     const history = useHistory(); 
 
     const handleSize = (event) =>{
@@ -42,6 +43,10 @@ function OrderPizzaForm({ setOrderData }) {
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        const selectedMaterialsPrice = selectMaterials.length * 5
+        const basePrice = 85.5
+        const totalAmount = (basePrice + selectedMaterialsPrice) * pizzaCount
+
         const orderData = {
             isim: isim,
             boyut: size,
@@ -49,8 +54,11 @@ function OrderPizzaForm({ setOrderData }) {
             note: notes,
             dough: dough,
             pizzaSayisi: pizzaCount,
-            totalAmount: totalAmount
+            totalAmount: totalAmount,
+            selectedMaterialsPrice: selectedMaterialsPrice,
         }
+        console.log('Gönderilen Order Data:', orderData)
+    
     
 
     axios
@@ -58,26 +66,26 @@ function OrderPizzaForm({ setOrderData }) {
         .then((res) => {
             if (res.data && res.data.id) {
                 setOrderData(orderData)
-                setIsim('');
-                setSize('');
-                setSelectMaterials([]);
-                setNotes('');
-                setDough('');
-                setPizzaCount(1);
 
                 history.push({ 
                     pathname: '/success',
-                    state: {
-                        orderData: orderData
-                    }
+                    state: { orderData }
                 });
                 console.log('Sipariş Özeti:', res.data);
             } else {
+                console.error('Response data hatalı:', res.data)
                 history.push('/orderpizza');
             }
         })
         .catch((error) => {
             console.error('Sipariş sırasında bir hata oluştu:', error);
+            if (error.response) {
+            console.error('Server response:', error.response);
+            } else if (error.request) {
+            console.error('Request made but no response:', error.request);
+            } else {
+            console.error('Error message:', error.message);
+            }
             history.push('/orderpizza');
         })
 }

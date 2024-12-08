@@ -16,7 +16,7 @@ function App() {
       <Route exact path='/'>
         <Redirect to="/home"/> 
       </Route>
-      <Route path='/home'>
+      <Route path='/home' component={Home}>
        <Home />
       </Route>
        <Route path='/orderpizza'>

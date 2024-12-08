@@ -13,9 +13,6 @@ export default function OrderPizza() {
       </header>
       
       <div className='section-top'>
-      
-       
-    
       <section className="product">
       <h2>Position Absolute Acı Pizza</h2>
       <p style={{fontWeight:'bold'}}>85.50₺</p>
