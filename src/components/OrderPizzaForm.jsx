@@ -11,9 +11,10 @@ function OrderPizzaForm({ setOrderData }) {
     const [size, setSize] = useState('')
     const [selectMaterials, setSelectMaterials] = useState([])
     const [isim, setIsim] = useState('')
-    const [notes, setNotes] = useState('');
-    const [dough, setDough] = useState('');
-    const [pizzaCount, setPizzaCount] = useState(1);
+    const [notes, setNotes] = useState('')
+    const [dough, setDough] = useState('')
+    const [pizzaCount, setPizzaCount] = useState(1)
+    const [error, setError] = useState('')
     
     const history = useHistory(); 
 
@@ -64,27 +65,29 @@ function OrderPizzaForm({ setOrderData }) {
     axios
         .post('https://reqres.in/api/pizza', orderData)
         .then((res) => {
+            console.log(res)
             if (res.data && res.data.id) {
                 setOrderData(orderData)
 
-                history.push({ 
-                    pathname: '/success',
-                    state: { orderData }
-                });
+                history.push('/success');
                 console.log('Sipariş Özeti:', res.data);
             } else {
                 console.error('Response data hatalı:', res.data)
-                history.push('/orderpizza');
+                setError('Sipariş alınamadı.')
+                history.push('/orderpizza')
             }
         })
         .catch((error) => {
             console.error('Sipariş sırasında bir hata oluştu:', error);
             if (error.response) {
-            console.error('Server response:', error.response);
+                setError('Lütfen tekrar deneyin.');
+                console.error('Server response:', error.response);
             } else if (error.request) {
-            console.error('Request made but no response:', error.request);
+                setError('İnternete bağlanılamadı. Lütfen internet bağlantınızı kontrol edin.');
+                console.error('İstek atıldı yanıt alınamadı:', error.request);
             } else {
-            console.error('Error message:', error.message);
+                setError('Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.');
+                console.error('Error message:', error.message);
             }
             history.push('/orderpizza');
         })
@@ -155,7 +158,7 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
                 </label>
               </div>
             </div>
-            <Button isFormValid={isFormValid} pizzaCount={pizzaCount} add={addPizza} removed={removePizza} selectedMaterialsPrice={selectedMaterialsPrice} totalAmount={totalAmount}/>
+            <Button isFormValid={isFormValid} pizzaCount={pizzaCount} add={addPizza} removed={removePizza} handleSubmit={handleSubmit} selectedMaterialsPrice={selectedMaterialsPrice} totalAmount={totalAmount}/>
         </form>
     </div>
   )

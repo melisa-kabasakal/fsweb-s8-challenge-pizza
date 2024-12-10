@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 
 function App() {
-  const [orderData, setOrderData] = useState(null)
+  const [orderData, setOrderData] = useState("")
 
   return (
     <>
@@ -16,9 +16,10 @@ function App() {
       <Route exact path='/'>
         <Redirect to="/home"/> 
       </Route>
-      <Route path='/home' component={Home}>
-       <Home />
+      <Route path='/home'>
+      <Home/>
       </Route>
+      
        <Route path='/orderpizza'>
        <OrderPizza setOrderData={setOrderData}/>
       </Route>

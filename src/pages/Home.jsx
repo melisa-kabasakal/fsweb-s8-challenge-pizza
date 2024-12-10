@@ -16,7 +16,7 @@ function Home() {
     <>
     <div className='home'>
       <img className="img-home" src="../images/iteration-1-images/logo.svg" />
-      <p className='lezzet'>lezzeti kaçırma</p>
+      <p className='lezzet'>fırsatı kaçırma</p>
       <p className='code'>KOD ACIKTIRIR</p>
       <p className='code'>PİZZA, DOYURUR</p>
       <input type="button" value="ACIKTIM" id="acıktım" onClick={handleClick} />

@@ -4,7 +4,7 @@ import OrderPizzaForm from '../components/OrderPizzaForm'
 import Footer from '../components/Footer'
 
 
-export default function OrderPizza() {
+export default function OrderPizza({ setOrderData }) {
   return (
     <>
     <div className="container">
@@ -22,7 +22,7 @@ export default function OrderPizza() {
       </p>
     </section>
     </div>
-    <OrderPizzaForm/>
+    <OrderPizzaForm setOrderData={setOrderData}/>
   
   <Footer/>
 </div>

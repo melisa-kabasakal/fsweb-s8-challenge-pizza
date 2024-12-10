@@ -1,21 +1,20 @@
-import React, { useEffect, useState } from 'react'
+
 import "../css/Success.css"
 import Footer from '../components/Footer'
-import { useLocation } from 'react-router-dom'
 
 
-function Success() {
-  const location = useLocation() 
-  const [orderData, setOrderData] = useState(null)
 
-  
-  useEffect(() => {
-    if (location.state.orderData) {
-      setOrderData(location.state.orderData)
-    }
-  }, [location]);
+function Success({ orderData }) {
+  console.log(orderData)
 
- 
+  if (!orderData) {
+    return (
+      <div className="error-message">
+        <h2>Bir hata oluştu. </h2>
+      </div>
+    );
+  }
+
 
   const { size, dough, materials, totalAmount, selectedMaterialsPrice } = orderData;
 
