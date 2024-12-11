@@ -97,6 +97,7 @@ const InstImgContainer = styled.div`
     }
 
 `
+
 const InstTitle = styled.h3`
 
 `

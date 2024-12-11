@@ -1,6 +1,6 @@
 .success{
     background-color: #CE2829;
-    height: 40rem;
+    min-height: 100vh;
     color: white;
     display: flex;
     flex-direction: column;
@@ -26,5 +26,32 @@
     margin-bottom: 0;
     margin-top: 2rem;
     font-size: 50px; 
+}
+.order-summary{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #FDC913;
+    border:none;
+    max-width: 330px;
+    max-height: 100vh;
+    overflow: hidden;
+    gap:2rem;
+}
+.select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    border: 1px solid rgb(215, 193, 193);
+    border-radius: 6px;
+    height: 200px;
+    width: 350px;
+    overflow: hidden;
+    gap:1rem;
+}
+
+.middle{
+    margin-left: 30px;
 }
 

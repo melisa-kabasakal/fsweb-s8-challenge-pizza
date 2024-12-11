@@ -16,15 +16,14 @@ function Success({ orderData }) {
   }
 
 
-  const { size, dough, materials, totalAmount, selectedMaterialsPrice } = orderData;
+  const { boyut, dough, materials, totalAmount, selectedMaterialsPrice } = orderData;
 
-  let ekMalzemeler = ""
+  let ekMalzemeler = "";
   materials.forEach((material, index) => {
     if (index !== 0) {
-      ekMalzemeler += ", "
-    } else {
-      ekMalzemeler += material;
+      ekMalzemeler += ", "; 
     }
+    ekMalzemeler += material;
   });
 
   return (
@@ -36,12 +35,16 @@ function Success({ orderData }) {
 
         <div className='order-summary'>
           <h3>Position Absolute Acı Pizza</h3>
-          <div><strong>Boyut:</strong> {size}</div>
+          <div className="middle">
+          <div ><strong>Boyut: </strong> {boyut === 'small' ? 'S' : boyut === 'medium' ? 'M' : 'L'}</div>
           <div><strong>Hamur:</strong> {dough}</div>
           <div><strong>Ek Malzemeler:</strong> {ekMalzemeler}</div>
+          </div>
+          <div className="select">
           <h4>Sipariş Toplamı</h4>
-          <div><strong>Seçimler</strong> {selectedMaterialsPrice}₺</div>
-          <div><strong>Toplam</strong> {totalAmount}₺</div>
+          <div className="secim"><strong>Seçimler</strong> {selectedMaterialsPrice}₺</div>
+          <div className="flex py-2 "><strong>Toplam</strong> {totalAmount}₺</div>
+        </div>
         </div>
       </div>
       <Footer />
@@ -50,3 +53,4 @@ function Success({ orderData }) {
 }
 
 export default Success;
+

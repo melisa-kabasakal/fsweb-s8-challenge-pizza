@@ -131,12 +131,13 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
                        <input type='radio' name='size' value="large" onChange={handleSize} checked={size === 'large'} data-cy="size-large"/>
                        <span>L</span>
                        </label>
+                       
                 </div>
                 <div>
                 <h4 style={{fontSize:'18px'}}>Hamur Seç<span style={{color:'red'}}>*</span></h4>
                 <select className="dough" value={dough} onChange={handleDoughChange} data-cy="size-dough">
                     <option value="" >-Hamur Kalınlığı Seç-</option>
-                    <option value="ince" >İnce</option>
+                    <option value="ince" >Süpper İnce</option>
                     <option value="normal" >Normal</option>
                     <option value="kalın" >Kalın</option>
                 </select>
