@@ -16,18 +16,22 @@ const FooterContainer = styled.footer`
    flex-wrap: wrap;
    
 
-   @media (max-width: 420px) {
-    justify-content: flex-start;
-      padding: 10px;
+   @media (max-width: 480px) {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
    }
 
    @media (max-width: 540px) {
-    justify-content: flex-start;
-      padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
    }
    @media (max-width: 768px) {
-      flex-direction: column; 
-      padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
    }
    
    
@@ -91,10 +95,19 @@ const InstImgContainer = styled.div`
     overflow: hidden;
     gap:0.5rem;
 
-    @media (max-width: 420px) {
+
+    @media (max-width: 480px) {
         display:flex;
         flex-wrap:wrap;
     }
+    @media (max-width: 540px) {
+        display:flex;
+        flex-wrap:wrap;
+   }
+   @media (max-width: 768px) {
+        display:flex;
+        flex-wrap:wrap;
+   }
 
 `
 
