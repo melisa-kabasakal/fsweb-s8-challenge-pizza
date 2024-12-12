@@ -20,18 +20,21 @@ const FooterContainer = styled.footer`
     display: flex;
     align-items: flex-start;
     padding: 20px;
+    min-height: 100vw ;
    }
 
    @media (max-width: 540px) {
     display: flex;
     align-items: flex-start;
     padding: 20px;
+    min-height: 100vw ;
    }
    @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    min-height: 100vw ;
    }
    
    
