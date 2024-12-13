@@ -19,24 +19,27 @@ const FooterContainer = styled.footer`
    @media (max-width: 480px) {
     display: flex;
     align-items: flex-start;
-    padding: 20px;
+    padding-left: 80px;
     min-height: 100vw ;
+    gap:30px;
    }
 
    @media (max-width: 540px) {
     display: flex;
     align-items: flex-start;
-    padding: 20px;
+    padding-left: 80px;
     min-height: 100vw ;
+    gap:30px;
    }
    @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding-left: 80px;
     min-height: 100vw ;
+    gap:30px;
    }
-   
+
    
 `
 const FooterBottomItem = styled.div`
@@ -79,6 +82,26 @@ margin-top: 15px;
 
 const FooterUl = styled.ul`
 
+@media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+   }
+
+   @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+   }
+
+@media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+   }
 `
 const ListItem = styled.li`
    list-style-type: none;
