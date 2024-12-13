@@ -3,77 +3,159 @@ import styled from 'styled-components'
 import Footer from '../components/Footer'
 
 
+
 const IconContainer = styled.section`
     border: 2px solid #FDC913;
     overflow: hidden;
-    max-height: 55px;
     max-width: 100%;
     padding: .5rem 0;
     border: none;
     background-color: #FFFFFF;
     width: 100vw;
+    padding: 5px;
+    height: 50px;
+
+    @media (max-width: 480px) {
+      display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    display: flex;
+    justify-content:center ;
+    align-items:center;
+    min-height: 180px;
+  }
 
 
     @media (max-width: 540px) {
+      display: grid;
+    grid-template-columns: repeat(2, 1fr); 
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
+    justify-content:center ;
+    align-items:center;
+    min-height: 180px;
+  }
+
+  @media (max-width: 768px) {
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    display: flex;
+    justify-content:center ;
+    align-items:center;  
+    min-height: 180px;
   }
 `
 const IconList = styled.ul`
  display: flex;
- justify-content: space-between;
- padding: 0;
- margin: 0;
- width: 100%;
+ justify-content: center;
+ align-items:center;
+ 
+
+ 
+
+ @media (max-width: 480px) {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 
  @media (max-width: 540px) {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
-    padding: 0;
-    margin: 0;
+  display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
   }
 
-`
-const IconItems = styled.li`
-   list-style-type: none;
-   display: flex;
-   justify-content:center;
-   align-items: center;
-   gap:.8rem;
-   flex: 1 1 45%; 
-   margin-bottom: 1rem;
-
-   @media (max-width: 540px) {
-    flex: 1 1 45%; 
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
   }
+
 `
 const Iconİmg = styled.img`
 max-width:30px;
+margin-left: 5px;
 `
 const IconText = styled.span`
 font-size:.8rem ;
-padding: 0 5px;
+padding-left: 3px;
+
 `
 const Icon1Container = styled.section`
-    @media (max-width: 540px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        
+display: flex;
+justify-content: center;
+align-items: center;
 
+
+    
+
+    @media (max-width: 480px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items:center;
+      align-items: center;    
+      gap: 1rem;              
+      width: 40%;
+       
+  } 
+
+    @media (max-width: 540px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items:center;
+      align-items: center;    
+      gap: 1rem;              
+      width: 40%;
+      
+  } 
+
+    @media (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items:center;
+      align-items: center;    
+      gap: 1rem;              
+      width: 40%;
   } 
 
 `
 const IconButton = styled.button`
-width: 150px;
+min-width: 130px;
 height: 50px;
 border-radius: 50px;
 color:black;
 background-color: #FFFFFF;
 font-family: Barlow;
-font-weight:500;
+margin: 0 10px;
+   margin-bottom: 1rem;
+
+
+   @media (max-width: 480px) {
+    min-width: 130px;
+    display: flex;
+    align-items:center;
+    gap:.5rem;
+  }
+  @media (max-width: 540px) {
+    min-width: 130px;
+    display: flex;
+    align-items:center;
+    gap:.5rem;
+  }
+
+@media (max-width: 768px) {
+    min-width: 130px;
+    display: flex;
+    align-items:center;
+    gap:.2rem;
+    padding-left:10px;
+  }
 
 `
 
@@ -87,7 +169,6 @@ const Cart = styled.div`
     overflow: hidden;
     height: 250px;
     width: 300px;
-    margin-left: 90px;
     border:none;
 
 `
@@ -163,13 +244,27 @@ const PositionContainer = styled.div`
     border:none;
     margin-top: -2px;
 
+    @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+  }
+
     @media (max-width: 540px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items:center;
-        margin-left: 90px;
   }
+
+  @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+  }
+
 
 `
 const Position = styled.div`
@@ -179,6 +274,15 @@ align-items: center;
 gap:1rem;
 margin: 2rem;
 
+
+@media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+
+  }
+
 @media (max-width: 540px) {
         display: flex;
         flex-direction: column;
@@ -186,15 +290,51 @@ margin: 2rem;
         align-items:center;
 
   }
+
+  @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        
+
+  }
 `
 const Container = styled.section`
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
     background-color: #FAF7F2;
+
+    @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+       
+  }
+
+  @media (max-width: 540px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+       
+  }
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;   
+  }
 `
 const Sub = styled.div`
-margin-left:40px; 
+
  margin-top: -70px;
  text-align: center;
 
@@ -210,6 +350,29 @@ color:#090101;
 font-size:30px;
 margin: 1.5rem;
 
+@media (max-width: 480px) {
+        display: flex;
+        flex-wrap:wrap;
+        max-width: 230px;
+        justify-content: center;
+        align-items:center;   
+  }
+  @media (max-width: 540px) {
+        display: flex;
+        flex-wrap:wrap;
+        max-width: 230px;
+        justify-content: center;
+        align-items:center;   
+  }
+
+@media (max-width: 768px) {
+        display: flex;
+        flex-wrap:wrap;
+        max-width: 230px;
+        justify-content: center;
+        align-items:center;   
+  }
+
 `
 
 const PicturesContainer = styled.div`
@@ -217,7 +380,15 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap:1rem;
-margin: 20px;
+margin-top: 20px;
+
+@media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+
+  }
 
 @media (max-width: 540px) {
         display: flex;
@@ -227,14 +398,21 @@ margin: 20px;
 
   }
 
+  @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;  
+  }
+
 `
 
 const PictureConteiner = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap:2rem;
-    
-    
+    gap:1.5rem; 
+
+   
 `
 
 const Picture = styled.div`
@@ -252,6 +430,17 @@ const Picture = styled.div`
     align-items: flex-end;
     border:none;
     margin-bottom: 50px;
+
+    @media (max-width: 480px) {   
+         margin-bottom:5px; 
+   }
+   @media (max-width: 540px) {   
+         margin-bottom:5px; 
+   }
+
+    @media (max-width: 768px) {   
+         margin-bottom:5px; 
+   }
 `
 
 const PictureText = styled.p`
@@ -292,6 +481,17 @@ const Picture2 = styled.div`
     border:none;
     margin-bottom: 50px;
 
+    @media (max-width: 480px) {   
+         margin-bottom:5px; 
+   }
+   @media (max-width: 540px) {   
+         margin-bottom:5px; 
+   }
+
+    @media (max-width: 768px) {   
+         margin-bottom:5px; 
+   }
+
 `
 const Picture3 = styled.div`
     background-image: url("./images/iteration-2-images/pictures/food-3.png");
@@ -319,20 +519,35 @@ function HomeSub() {
     <Container>
         <IconContainer>
            <IconList >
-            <IconItems>
+           <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/1.svg'/>
             <IconText>YENİ! Kore</IconText>
+            </IconButton>
+            
+            
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/2.svg'/>
             <IconText>Pizza</IconText>
+            </IconButton>
+            
+            
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/3.svg'/>
             <IconText>Burger</IconText>
+            </IconButton>
+            
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/4.svg'/>
             <IconText>Kızartmalar</IconText>
+            </IconButton>
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/5.svg'/>
             <IconText>Fast Food</IconText>
+            </IconButton>
+            <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/6.svg'/>
             <IconText>Gazlı İçecek</IconText>
-            </IconItems>
+            </IconButton>
            </IconList>
         </IconContainer>
         
@@ -352,7 +567,7 @@ function HomeSub() {
              <CartButon>SİPARİŞ VER</CartButon>
         </BurgerContainer>
         <CourierContainer>
-            <CourierText>Çoooook</CourierText>
+            <CourierText>Çoooook </CourierText>
              <Courier>hızlı npm gibi kurye</Courier>
              <CartButon>SİPARİŞ VER</CartButon>
         </CourierContainer>
@@ -366,8 +581,7 @@ function HomeSub() {
         </Sub>
 
         <Icon1Container>
-           <IconList >
-            <IconItems>
+           <IconList >  
             <IconButton>
             <Iconİmg src='./images/iteration-2-images/icons/1.svg'/>
             <IconText>Ramen</IconText>
@@ -392,7 +606,6 @@ function HomeSub() {
             <Iconİmg src='./images/iteration-2-images/icons/6.svg'/>
             <IconText>Soft Drinks</IconText>
             </IconButton>
-            </IconItems>
            </IconList>
         </Icon1Container>
 
