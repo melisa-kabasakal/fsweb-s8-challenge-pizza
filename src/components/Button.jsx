@@ -18,13 +18,14 @@ function Button({ isFormValid, pizzaCount, add, removed, totalAmount, selectedMa
         Sipariş Toplamı
       </h4>
       <p>Seçimler: {(selectedMaterialsPrice * pizzaCount)}₺</p>
-      <p style={{color: 'red'}}>Toplam: {totalAmount.toFixed(1)}₺</p>
+      <p style={{color: 'red'}}>Toplam: {totalAmount.toFixed(2)}₺</p>
       </div>
-      <button className='siparis' type='button' disabled={!isFormValid} onClick={handleSubmit}>Sipariş Ver</button>
+      <button className='siparis' type='button' disabled={!isFormValid} onClick={handleSubmit} data-cy="submit-button">Sipariş Ver</button>
       </div>
     </div>
   )
 }
+
 
 export default Button
 

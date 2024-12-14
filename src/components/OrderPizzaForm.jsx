@@ -71,10 +71,6 @@ function OrderPizzaForm({ setOrderData }) {
 
                 history.push('/success');
                 console.log('Sipariş Özeti:', res.data);
-            } else {
-                console.error('Response data hatalı:', res.data)
-                setError('Sipariş alınamadı.')
-                history.push('/orderpizza')
             }
         })
         .catch((error) => {
@@ -83,7 +79,7 @@ function OrderPizzaForm({ setOrderData }) {
                 setError('Lütfen tekrar deneyin.');
                 console.error('Server response:', error.response);
             } else if (error.request) {
-                setError('İnternete bağlanılamadı. Lütfen internet bağlantınızı kontrol edin.');
+                setError('İnternete bağlanılamadı.Lütfen internet bağlantınızı kontrol edin.');
                 console.error('İstek atıldı yanıt alınamadı:', error.request);
             } else {
                 setError('Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.');
@@ -116,6 +112,7 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
   return (
     <div>
         <form className='form' onSubmit={handleSubmit}>
+        {error && <div >{error}</div>}
             <div className='size'>
                 <div className="radio-container">
                     <h4 style={{fontSize:'18px'}}>Boyut Seç<span style={{color:'red'}}>*</span></h4>
@@ -137,7 +134,7 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
                 <h4 style={{fontSize:'18px'}}>Hamur Seç<span style={{color:'red'}}>*</span></h4>
                 <select className="dough" value={dough} onChange={handleDoughChange} data-cy="size-dough">
                     <option value="" >-Hamur Kalınlığı Seç-</option>
-                    <option value="ince" >Süpper İnce</option>
+                    <option value="Süpper İnce">Süpper İnce</option>
                     <option value="normal" >Normal</option>
                     <option value="kalın" >Kalın</option>
                 </select>
@@ -146,10 +143,10 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
             
             <Materials handleSelectMaterials={handleSelectMaterials}/>
             <div className='name'>
-            <label style={{fontWeight:'bold', marginLeft:'3px'}}>İsim<span style={{color:'red'}}>*</span></label>
+            <label style={{fontWeight:'bold', marginLeft:'3px'}} data-cy="label-name">İsim<span style={{color:'red'}}>*</span></label>
             </div>
                 <label>
-                    <input type='text' id="name" value={isim} onChange={handleNameChange} />
+                    <input type='text' id="name" value={isim} onChange={handleNameChange} data-cy="input-name"/>
                 </label>
             <div className='notes'>
             <label style={{fontWeight:'bold', marginLeft:'3px'}}>Sipariş Notu</label>
@@ -159,7 +156,7 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
                 </label>
               </div>
             </div>
-            <Button isFormValid={isFormValid} pizzaCount={pizzaCount} add={addPizza} removed={removePizza} handleSubmit={handleSubmit} selectedMaterialsPrice={selectedMaterialsPrice} totalAmount={totalAmount}/>
+            <Button isFormValid={isFormValid} pizzaCount={pizzaCount} add={addPizza} removed={removePizza} handleSubmit={handleSubmit} selectedMaterialsPrice={selectedMaterialsPrice} totalAmount={totalAmount} />
         </form>
     </div>
   )
