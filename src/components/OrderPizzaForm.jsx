@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 
+
 function OrderPizzaForm({ setOrderData }) {
     const [size, setSize] = useState('')
     const [selectMaterials, setSelectMaterials] = useState([])
@@ -134,11 +135,12 @@ const isFormValid = size && selectMaterials.length >= 4 && selectMaterials.lengt
                 <h4 style={{fontSize:'18px'}}>Hamur Seç<span style={{color:'red'}}>*</span></h4>
                 <select className="dough" value={dough} onChange={handleDoughChange} data-cy="size-dough">
                     <option value="" >-Hamur Kalınlığı Seç-</option>
-                    <option value="Süpper İnce">Süpper İnce</option>
+                    <option value="ince">Süpper İnce</option>
                     <option value="normal" >Normal</option>
                     <option value="kalın" >Kalın</option>
                 </select>
                 </div>
+
             </div>
             
             <Materials handleSelectMaterials={handleSelectMaterials}/>
